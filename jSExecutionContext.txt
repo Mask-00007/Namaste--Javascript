@@ -1,0 +1,49 @@
+JAVASCRIPT EXECUTION CONTEXT : It means how a code gets executed with the
+                               help of javascript.
+
+Whenever we push a code into javascript, it will move to the two locations:
+  01. GLOBAL EXECUTION CONTEXT (it refers to the variable "this");
+      In browser, this refers to the "Window Object".                             
+
+  02. FUNCTION EXECUTION CONTEXT : 
+  
+JAVASCRIPT code will be executed into two phases:
+  01. MEMEORY CREATION PHASE ( CREATION PHASE )
+  02. EXECUTION PHASE 
+
+  Example:
+          let val1 = 10;
+          let val2 = 5;
+          function addNum(num1, num2) {
+            let total = num1 + num2;
+            return total;
+          };
+          let result1 = addNum(val1, val2);
+          let result2 = addNum(10, 2);
+
+Let's talk about memeory creation phase: CYCLE "2"
+          val1 => undefinied
+          val2 => undefinied
+          addNum => definition
+          result1 => undefinied 
+          result2 => undefinied            
+
+EXECUTION PHASE : CYCLE "3"
+          val1 <= 10
+          val2 <= 5
+          addNum => definition (because this a function)
+             **In this, "a new variable enviornment + execution thread",
+             will be created and once it is used, it will be deleted automatically.
+             When the enviornment gets created, again the memeoryphase and execution
+             context takes place.
+
+             Meanwhile:
+                 MEMEORY PHASE: val1 => undefinied
+                                val2 => undefinied
+                                total => undefinied
+
+                 EXECUTION PHASE: num1 => 10 
+                                  num2 => 5
+                                  total => 15 ( and it will be declared to the global scope )
+
+Again, a new variable enviornment will be created for the result2.
