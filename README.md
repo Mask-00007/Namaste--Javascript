@@ -1,88 +1,144 @@
-# JavaScript Learning Journey
+# 🚀 JavaScript Learning Journey
 
-Welcome to my JavaScript learning repository!
-This space documents my hands-on journey through JavaScript — including structured notes, practical code snippets, and mini-projects — inspired by the **Code aur Chai** tutorial series.
+![Status](https://img.shields.io/badge/Status-Learning%20in%20Progress-blue)
+![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)
+![GitHub last commit](https://img.shields.io/github/last-commit/your-username/your-repo)
+
+---
+
+## 📌 About This Repository
+
+Welcome to my **JavaScript Learning Journey** 👨‍💻  
+
+This repository documents my hands-on journey of mastering JavaScript through:
+- 📖 Structured notes  
+- 💻 Practical code snippets  
+- 🧪 Hands-on experiments  
+
+Inspired by the **Code aur Chai** tutorial series ☕
 
 ---
 
 ## 📖 What You'll Find Here
 
-This repository is a collection of everything I’m learning and building while mastering JavaScript fundamentals and core concepts.
+A well-organized collection of concepts, examples, and exercises that build a strong foundation in JavaScript.
 
-### 🔹 Core Topics Covered
+---
 
-* JavaScript basics & syntax
-* Data types and variables
-* Operators and type conversion
-* Strings and string methods
-* Numbers and Math operations
-* Dates and time handling
-* Control flow (if-else, switch)
-* Loops and iterations
-* Functions and scope
-* Arrays and objects
-* DOM basics (upcoming)
+## 🧠 Topics Covered
+
+### 🔹 Core Fundamentals
+- JavaScript basics & syntax  
+- Data types and variables  
+- Operators and type conversion  
+- Strings and string methods  
+- Numbers and Math operations  
+- Dates and time handling  
+
+### 🔹 Logic & Execution
+- Control flow (if-else, switch)  
+- Loops and iterations (`while`, `for...of`)  
+- Functions and scope  
+- `this` keyword and execution context  
+- Arrow functions (explicit & implicit return)  
+
+### 🔹 Objects & OOP Basics
+- Object literals and methods  
+- Constructor functions  
+- `new` keyword and object instantiation  
+
+### 🔹 Data Structures
+- Arrays and array methods  
+- Working with Maps and iteration over collections  
+
+### 🔹 DOM & Browser
+- DOM manipulation (selection, traversal, styling)  
+- Event handling (bubbling, capturing, delegation)  
+
+### 🔹 Asynchronous JavaScript
+- Promises  
+- Async/Await  
+- Fetch API (working with APIs)  
 
 ---
 
 ## 📂 Project Structure
 
-Each file/folder represents a specific concept or stage in my learning process:
 
-```
-├── dataTypes.js             → Understanding different data types  
-├── conversionOperation.js  → Type conversion and operations  
-├── string.js               → String manipulation and methods  
-├── numsAndMaths.js         → Numbers and Math functions  
-├── dates.js                → Working with dates and time  
-├── comparision.js          → Comparison operators and logic  
-├── dataTypesSummary.txt    → Quick summary notes  
-```
+📦 javascript-learning
+┣ 📜 dataTypes.js
+┣ 📜 conversionOperation.js
+┣ 📜 string.js
+┣ 📜 numsAndMaths.js
+┣ 📜 dates.js
+┣ 📜 comparision.js
+┣ 📜 arrays.js
+┣ 📜 functions.js
+┣ 📜 controlFlow.js
+┣ 📜 loops.js
+┣ 📜 objects.js
+┣ 📜 promises.js
+┣ 📜 events.html
+┣ 📜 dom.html
+┗ 📄 dataTypesSummary.txt
 
----
-
-## 📚 Learning Resources
-
-Here are the key resources guiding my journey:
-
-* 🎥 **Code aur Chai (YouTube Series)**
-  https://www.youtube.com/@chaiaurcode
-
-* 📘 **JavaScript Documentation (MDN)**
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript
-
-* 🌐 **ECMAScript Specification (Reference)**
-  https://tc39.es/ecma262/
 
 ---
 
 ## 🎯 Purpose of This Repository
 
-This repository is not just about learning JavaScript — it's about:
-
-* Building a strong foundation in core programming concepts
-* Understanding how JavaScript works under the hood
-* Practicing through examples and hands-on coding
-* Preparing for advanced topics like React and backend development
+- 🧱 Build strong JavaScript fundamentals  
+- ⚙️ Understand how JavaScript works internally  
+- 🧪 Practice through real code examples  
+- 🚀 Prepare for React & backend development  
 
 ---
 
-## ✨ Future Updates
+## 📚 Learning Resources
 
-As I progress, I’ll be adding:
+- 🎥 Code aur Chai (YouTube)  
+  https://www.youtube.com/@chaiaurcode  
 
-* Advanced JavaScript concepts (closures, promises, async/await)
-* DOM manipulation projects
-* Real-world mini projects
-* Best practices and optimization techniques
+- 📘 MDN JavaScript Documentation  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript  
 
----
-
-## 🤝 Let's Connect
-
-If you're also learning JavaScript or have suggestions, feel free to connect or contribute!
+- 🌐 ECMAScript Specification  
+  https://tc39.es/ecma262/  
 
 ---
 
-⭐ *If you find this helpful, consider giving it a star!*
+## ✨ Future Improvements
 
+- Advanced JavaScript (Closures, Prototypes, Classes, Event Loop)  
+- More DOM-based interactive projects  
+- Real-world API-based projects  
+- Performance optimization & best practices  
+
+---
+
+## 🤝 Contributing
+
+Suggestions, improvements, and ideas are always welcome!  
+Feel free to fork this repository and contribute 🙌  
+
+---
+
+## 🌟 Support
+
+If you find this helpful:
+
+⭐ Star this repository  
+🔁 Share with others learning JavaScript  
+
+---
+
+## 📬 Connect With Me
+
+- 💼 LinkedIn: *www.linkedin.com/in/shubhamraj-dev*  
+- 🐙 GitHub: https://github.com/Mask-00007  
+
+---
+
+> 💡 *"Consistency beats intensity. Keep building every day."*
+
+## 📂 Project Structure
