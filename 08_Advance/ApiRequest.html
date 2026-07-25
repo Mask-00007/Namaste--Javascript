@@ -1,21 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="background-color: #212121;">
-    Value	State	Description
-0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
-</body>
-<script>
-    // Request through xm => OLD METHOD (NOT IN USE TODAY)
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      table {
+        width: 80%;
+        margin: 50px auto;
+        border-collapse: collapse;
+        background-color: #1e1e1e;
+      }
+
+      th,
+      td {
+        border: 1px solid #444;
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #333;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2a2a2a;
+      }
+
+      .card {
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      .card h3 {
+        margin: 10px 0 5px;
+        font-size: 18px;
+      }
+      .card p {
+        margin: 0 0 15px;
+        color: #555;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121">
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>State</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>UNSENT</td>
+          <td>Client has been created. open() not called yet.</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>OPENED</td>
+          <td>open() has been called.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>HEADERS_RECEIVED</td>
+          <td>send() has been called, and headers and status are available.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>LOADING</td>
+          <td>Downloading; responseText holds partial data.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>DONE</td>
+          <td>The operation is complete.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="user-container"></div>
+  </body>
+  <script>
+    // Request through xml => OLD METHOD (NOT IN USE TODAY)
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "")
-</script>
+    xhr.open("GET", "https://randomuser.me/api/");
+    // TO track the continuous change
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const data = JSON.parse(this.responseText); // Convert String into JSON
+        console.log(data);
+        console.log(typeof data);
+        console.log(data.info);
+        console.log(data.results);
+        console.log(data.results[0].gender);
+        console.log(data.results[0].name);
+        console.log(data.results[0].picture);
+        console.log(data.results[0].picture.medium);
+        console.log(data.results[0].email);
+
+        const user = data.results[0];
+
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const img = document.createElement("img");
+        img.src =
+          "https://www.shutterstock.com/image-photo/studio-shot-two-happy-dogs-600w-2672290715.jpg";
+        card.appendChild(img);
+
+        const name = document.createElement("h3");
+        name.textContent = `${user.name.first} ${user.name.last}`;
+        card.appendChild(name);
+
+        const email = document.createElement("p");
+        email.textContent = user.email;
+        card.appendChild(email);
+
+        document.getElementById("user-container").appendChild(card);
+      }
+    };
+
+    xhr.send();
+  </script>
 </html>
